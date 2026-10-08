@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roofing Services | Clark Brothers Roofing & Construction</title>
+<meta name="description" content="Full-service roofing in Plano, TX: leak detection, storm damage repair, shingle & tile replacement, full roof replacement, commercial & residential roofing, gutter and chimney repair.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root{
+    --ink:#0A1220; --navy:#101B2E; --navy2:#16243B; --steel:#2C4460;
+    --cloud:#F5F7FA; --paper:#ECEEF2; --copper:#C77B3D; --copper-light:#E2A365;
+    --line: rgba(255,255,255,0.09);
+  }
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',sans-serif; background:var(--cloud); color:var(--navy);}
+  h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .bg-ink{background:var(--ink);} .bg-navy{background:var(--navy);} .bg-navy2{background:var(--navy2);}
+  .text-copper{color:var(--copper);} .bg-copper{background:var(--copper);}
+  .border-line{border-color:var(--line);}
+  .btn-copper{ background:linear-gradient(180deg,var(--copper-light),var(--copper)); box-shadow:0 8px 24px -8px rgba(199,123,61,.55);}
+  .btn-copper:hover{filter:brightness(1.07);}
+  .card{ background:#fff; border:1px solid #E4E7EC; box-shadow:0 1px 2px rgba(16,27,46,.04); transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;}
+  .card:hover{transform:translateY(-4px); box-shadow:0 20px 40px -16px rgba(16,27,46,.18); border-color:#D8DEE7;}
+  .roofline{display:block; width:100%; line-height:0;}
+  .blueprint{
+    background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .mobile-menu{transform:translateY(-12px); opacity:0; pointer-events:none; transition:all .22s ease;}
+  .mobile-menu.open{transform:translateY(0); opacity:1; pointer-events:auto;}
+  .focus-ring:focus{outline:2px solid var(--copper); outline-offset:2px;}
+  ::selection{background:var(--copper); color:#fff;}
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ============ NAV ============ -->
+<header class="fixed top-0 inset-x-0 z-50 bg-ink/95 backdrop-blur border-b border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 h-18 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2.5">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 4L29 15H23V27H9V15H3L16 4Z" fill="#C77B3D"/>
+        <rect x="13" y="19" width="6" height="8" fill="#0A1220"/>
+      </svg>
+      <span class="text-white display font-semibold text-[17px] leading-tight tracking-tight">Clark Brothers<br><span class="text-[11px] font-normal text-white/50 tracking-widest mono">ROOFING &amp; CONSTRUCTION</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-9 text-[14.5px] font-medium text-white/75">
+      <a href="index.html#why" class="hover:text-white transition-colors">Why Us</a>
+      <a href="services.html" class="text-white">Services</a>
+      <a href="services.html#by-roof-type" class="hover:text-white transition-colors">Emergency Services</a>
+      <a href="index.html#quote" class="hover:text-white transition-colors">Get a Quote</a>
+      <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="tel:4692901620" class="hidden sm:flex items-center gap-2 text-white mono text-[15px] font-semibold hover:text-copper transition-colors">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (469) 290-1620
+      </a>
+      <a href="index.html#quote" class="btn-copper text-ink font-semibold text-[13.5px] px-4 py-2.5 rounded-md">Free Quote</a>
+      <button id="menuBtn" class="md:hidden text-white p-1.5" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="mobile-menu md:hidden bg-ink border-t border-line px-5 py-4 flex flex-col gap-4 text-white/85 text-[15px] font-medium">
+    <a href="index.html#why">Why Us</a>
+    <a href="services.html" class="text-copper">Services</a>
+    <a href="services.html#by-roof-type">Emergency Services</a>
+    <a href="index.html#quote">Get a Quote</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="bg-ink blueprint pt-32 pb-16 relative overflow-hidden">
+  <div class="absolute -right-24 top-10 w-[420px] h-[420px] rounded-full bg-copper/10 blur-3xl"></div>
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 relative">
+    <p class="text-copper mono text-[13px] font-semibold tracking-widest mb-3">OUR SERVICES</p>
+    <h1 class="text-white text-[38px] sm:text-[52px] leading-[1.05] font-semibold tracking-tight display max-w-2xl">Roofing Services Built<br>for Texas Weather</h1>
+    <p class="text-white/65 text-lg mt-5 max-w-xl">From a single missing shingle to a full commercial re-roof — one licensed, insured crew handles it all.</p>
+  </div>
+  <svg class="roofline absolute bottom-0 left-0" viewBox="0 0 1200 46" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="0,46 0,26 50,6 100,26 150,6 200,26 250,6 300,26 350,6 400,26 450,6 500,26 550,6 600,26 650,6 700,26 750,6 800,26 850,6 900,26 950,6 1000,26 1050,6 1100,26 1150,6 1200,26 1200,46" fill="#F5F7FA"/>
+  </svg>
+</section>
+
+<!-- ============ SERVICES GRID (detailed) ============ -->
+<section class="bg-cloud py-16 sm:py-24">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <div class="card rounded-xl p-8">
+        <div class="w-12 h-12 rounded-lg bg-navy flex items-center justify-center mb-6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E2A365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s6 6.5 6 11.5A6 6 0 016 13.5C6 8.5 12 2 12 2z"/></svg>
+        </div>
+        <h3 class="font-semibold text-[19px] mb-2.5">Leak Detection &amp; Repair</h3>
+        <p class="text-[14px] text-navy/60 leading-relaxed mb-5">We use moisture mapping and a full attic inspection to trace leaks back to their true source — not just the water stain on your ceiling — then seal it right the first time.</p>
+        <a href="index.html#quote" class="text-copper font-semibold text-[13.5px] inline-flex items-center gap-1.5 hover:gap-2.5 transition-all">Request this service <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="card rounded-xl p-8">
+        <div class="w-12 h-12 rounded-lg bg-navy flex items-center justify-center mb-6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E2A365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 000-9 6 6 0 00-11.5-1.5A4.5 4.5 0 006 17"/><path d="M11 20l1.5-3M15 20l1.5-3M8 20l1.5-3"/></svg>
+        </div>
+        <h3 class="font-semibold text-[19px] mb-2.5">Emergency Hail &amp; Storm Damage Repair</h3>
+        <p class="text-[14px] text-navy/60 leading-relaxed mb-5">DFW hailstorms don't wait for business hours, and neither do we. Our crews tarp and stabilize damaged roofs within hours, then handle full repair and insurance paperwork.</p>
+        <a href="index.html#quote" class="text-copper font-semibold text-[13.5px] inline-flex items-center gap-1.5 hover:gap-2.5 transition-all">Request this service <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="card rounded-xl p-8">
+        <div class="w-12 h-12 rounded-lg bg-navy flex items-center justify-center mb-6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E2A365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        </div>
+        <h3 class="font-semibold text-[19px] mb-2.5">Shingle &amp; Tile Replacement</h3>
+        <p class="text-[14px] text-navy/60 leading-relaxed mb-5">Cracked, curling, or missing shingles and tiles replaced with a precise color and profile match, so repairs blend seamlessly into your existing roofline.</p>
+        <a href="index.html#quote" class="text-copper font-semibold text-[13.5px] inline-flex items-center gap-1.5 hover:gap-2.5 transition-all">Request this service <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="card rounded-xl p-8">
+        <div class="w-12 h-12 rounded-lg bg-navy flex items-center justify-center mb-6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E2A365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
+        </div>
+        <h3 class="font-semibold text-[19px] mb-2.5">Full Roof Replacement</h3>
+        <p class="text-[14px] text-navy/60 leading-relaxed mb-5">Complete tear-off, deck inspection, and re-roof using premium architectural materials — most homes finished in a day or two, with a written workmanship warranty.</p>
+        <a href="index.html#quote" class="text-copper font-semibold text-[13.5px] inline-flex items-center gap-1.5 hover:gap-2.5 transition-all">Request this service <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="card rounded-xl p-8">
+        <div class="w-12 h-12 rounded-lg bg-navy flex items-center justify-center mb-6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E2A365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+        </div>
+        <h3 class="font-semibold text-[19px] mb-2.5">Commercial &amp; Residential Roofing</h3>
+        <p class="text-[14px] text-navy/60 leading-relaxed mb-5">Single-family homes, multi-unit properties, and low-slope commercial roofs — one crew, one point of contact, and the same standard of work on every job.</p>
+        <a href="index.html#quote" class="text-copper font-semibold text-[13.5px] inline-flex items-center gap-1.5 hover:gap-2.5 transition-all">Request this service <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+      <div class="card rounded-xl p-8">
+        <div class="w-12 h-12 rounded-lg bg-navy flex items-center justify-center mb-6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E2A365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="4" height="8"/><path d="M5 22V13a7 7 0 0114 0v9"/></svg>
+        </div>
+        <h3 class="font-semibold text-[19px] mb-2.5">Gutter, Chimney &amp; Fascia Repair</h3>
+        <p class="text-[14px] text-navy/60 leading-relaxed mb-5">Complete exterior protection beyond the shingles — gutter repair and replacement, chimney flashing, and fascia and soffit repair to keep water moving away from your home.</p>
+        <a href="index.html#quote" class="text-copper font-semibold text-[13.5px] inline-flex items-center gap-1.5 hover:gap-2.5 transition-all">Request this service <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ EMERGENCY SERVICES BY ROOF TYPE ============ -->
+<section id="by-roof-type" class="bg-white py-16 sm:py-24 border-t border-[#E4E7EC]">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <p class="text-copper mono text-[13px] font-semibold tracking-widest mb-3">EMERGENCY ROOFING SERVICES</p>
+      <h2 class="text-3xl sm:text-4xl font-semibold display tracking-tight mb-4">Emergency Roofing Services for Plano Area Homes</h2>
+      <p class="text-navy/60 leading-relaxed">Contact our local and reliable roofing services in Plano whenever you need assistance — every material, every repair, handled by one crew.</p>
+    </div>
+
+    <div id="roofAccordion" class="max-w-4xl mx-auto space-y-4">
+
+      <!-- Composite Shingles -->
+      <div class="acc-item card rounded-xl overflow-hidden">
+        <button type="button" class="acc-trigger w-full flex items-center justify-between gap-4 px-6 sm:px-7 py-5 text-left" aria-expanded="true">
+          <span class="flex items-center gap-4">
+            <span class="shrink-0 w-11 h-11 rounded-lg bg-navy flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E2A365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            </span>
+            <span>
+              <span class="block font-semibold text-[17px]">Composite Shingles</span>
+              <span class="block text-[12.5px] text-navy/45 mono mt-0.5">5 SERVICES</span>
+            </span>
+          </span>
+          <svg class="acc-chevron shrink-0 transition-transform duration-300" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#101B2E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="acc-panel">
+          <div class="px-6 sm:px-7 pb-7 pt-1 grid sm:grid-cols-2 gap-4">
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Shingle Replacement</p><p class="text-[13px] text-navy/55 mt-0.5">Substitute damaged or lost shingles with new ones.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Granule Loss Replacement</p><p class="text-[13px] text-navy/55 mt-0.5">Restoring granules to maintain shingle effectiveness.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Leak Repair</p><p class="text-[13px] text-navy/55 mt-0.5">Sealing leak sources to prevent water damage.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Flashing Repair</p><p class="text-[13px] text-navy/55 mt-0.5">Repairing the flashing around chimneys, vents, and skylights.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Moss and Algae Removal</p><p class="text-[13px] text-navy/55 mt-0.5">Removing moss and algae to preserve shingle quality.</p></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Metal Roofs -->
+      <div class="acc-item card rounded-xl overflow-hidden">
+        <button type="button" class="acc-trigger w-full flex items-center justify-between gap-4 px-6 sm:px-7 py-5 text-left" aria-expanded="false">
+          <span class="flex items-center gap-4">
+            <span class="shrink-0 w-11 h-11 rounded-lg bg-navy flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E2A365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M5 14h14M5 18h14"/></svg>
+            </span>
+            <span>
+              <span class="block font-semibold text-[17px]">Metal Roofs</span>
+              <span class="block text-[12.5px] text-navy/45 mono mt-0.5">5 SERVICES</span>
+            </span>
+          </span>
+          <svg class="acc-chevron shrink-0 transition-transform duration-300" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#101B2E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="acc-panel hidden">
+          <div class="px-6 sm:px-7 pb-7 pt-1 grid sm:grid-cols-2 gap-4">
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Seam Repair</p><p class="text-[13px] text-navy/55 mt-0.5">Fixing seams that have become loose or separated.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Rust Removal</p><p class="text-[13px] text-navy/55 mt-0.5">Treating rusted sections to extend roof life.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Dent Repair</p><p class="text-[13px] text-navy/55 mt-0.5">Smoothing out dents to restore roof aesthetics.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Coating Renewal</p><p class="text-[13px] text-navy/55 mt-0.5">Applying new protective layers to combat environmental damage.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Screw Replacement</p><p class="text-[13px] text-navy/55 mt-0.5">Updating fasteners to prevent leaks.</p></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clay Tiles -->
+      <div class="acc-item card rounded-xl overflow-hidden">
+        <button type="button" class="acc-trigger w-full flex items-center justify-between gap-4 px-6 sm:px-7 py-5 text-left" aria-expanded="false">
+          <span class="flex items-center gap-4">
+            <span class="shrink-0 w-11 h-11 rounded-lg bg-navy flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E2A365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c0-4 3-6 8-6s8 2 8 6"/><path d="M4 14c0-4 3-6 8-6s8 2 8 6"/></svg>
+            </span>
+            <span>
+              <span class="block font-semibold text-[17px]">Clay Tiles</span>
+              <span class="block text-[12.5px] text-navy/45 mono mt-0.5">5 SERVICES</span>
+            </span>
+          </span>
+          <svg class="acc-chevron shrink-0 transition-transform duration-300" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#101B2E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="acc-panel hidden">
+          <div class="px-6 sm:px-7 pb-7 pt-1 grid sm:grid-cols-2 gap-4">
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Tile Replacement</p><p class="text-[13px] text-navy/55 mt-0.5">Renew broken tiles to maintain roof aesthetics.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Re-pointing</p><p class="text-[13px] text-navy/55 mt-0.5">Mending deteriorating mortar for enhanced stability.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Debris Cleaning</p><p class="text-[13px] text-navy/55 mt-0.5">Removing debris from between tiles to prevent water accumulation.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Underlayment Repair</p><p class="text-[13px] text-navy/55 mt-0.5">Mending damaged underlayment for continued protection.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Impact Damage Repair</p><p class="text-[13px] text-navy/55 mt-0.5">Fixing impact-damaged tiles to restore roof function.</p></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slate Roofs -->
+      <div class="acc-item card rounded-xl overflow-hidden">
+        <button type="button" class="acc-trigger w-full flex items-center justify-between gap-4 px-6 sm:px-7 py-5 text-left" aria-expanded="false">
+          <span class="flex items-center gap-4">
+            <span class="shrink-0 w-11 h-11 rounded-lg bg-navy flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E2A365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z"/></svg>
+            </span>
+            <span>
+              <span class="block font-semibold text-[17px]">Slate Roofs</span>
+              <span class="block text-[12.5px] text-navy/45 mono mt-0.5">5 SERVICES</span>
+            </span>
+          </span>
+          <svg class="acc-chevron shrink-0 transition-transform duration-300" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#101B2E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="acc-panel hidden">
+          <div class="px-6 sm:px-7 pb-7 pt-1 grid sm:grid-cols-2 gap-4">
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Slate Tile Replacement</p><p class="text-[13px] text-navy/55 mt-0.5">Substitute damaged or lost slate tiles with new ones.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Flashing Repair</p><p class="text-[13px] text-navy/55 mt-0.5">Restoring flashing integrity for enhanced protection.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Delamination Check</p><p class="text-[13px] text-navy/55 mt-0.5">Inspecting for delamination to prevent water ingress.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Snow Guard Installation</p><p class="text-[13px] text-navy/55 mt-0.5">Implementing snow retention systems on slate roofs.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Structural Inspection</p><p class="text-[13px] text-navy/55 mt-0.5">Assessing the capacity of roof structures to support slate.</p></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wood Shingles -->
+      <div class="acc-item card rounded-xl overflow-hidden">
+        <button type="button" class="acc-trigger w-full flex items-center justify-between gap-4 px-6 sm:px-7 py-5 text-left" aria-expanded="false">
+          <span class="flex items-center gap-4">
+            <span class="shrink-0 w-11 h-11 rounded-lg bg-navy flex items-center justify-center">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E2A365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l8-6 8 6v12"/><path d="M4 15h16M4 9h16"/></svg>
+            </span>
+            <span>
+              <span class="block font-semibold text-[17px]">Wood Shingles</span>
+              <span class="block text-[12.5px] text-navy/45 mono mt-0.5">5 SERVICES</span>
+            </span>
+          </span>
+          <svg class="acc-chevron shrink-0 transition-transform duration-300" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#101B2E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="acc-panel hidden">
+          <div class="px-6 sm:px-7 pb-7 pt-1 grid sm:grid-cols-2 gap-4">
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Rot Repair</p><p class="text-[13px] text-navy/55 mt-0.5">Treating rot in wood shingles to preserve roof integrity.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Shingle Resealing</p><p class="text-[13px] text-navy/55 mt-0.5">Resealing wood shingles to enhance waterproofing.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Color Restoration</p><p class="text-[13px] text-navy/55 mt-0.5">Enhancing wood shingle color to boost curb appeal.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Insect Damage Repair</p><p class="text-[13px] text-navy/55 mt-0.5">Restoring shingles damaged by bugs to prevent further decay.</p></div></div>
+            <div class="flex gap-3"><svg class="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><p class="font-semibold text-[14.5px]">Splitting Repair</p><p class="text-[13px] text-navy/55 mt-0.5">Mending shingles that have split due to dry conditions.</p></div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="index.html#quote" class="btn-copper inline-block text-ink font-semibold text-[15.5px] px-7 py-4 rounded-lg">Get a Free Quote</a>
+      <a href="tel:4692901620" class="inline-flex items-center gap-2 ml-4 text-navy font-semibold mono text-[15px] hover:text-copper transition-colors">(469) 290-1620</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS STRIP ============ -->
+<section class="bg-navy relative overflow-hidden">
+  <div class="absolute inset-0 blueprint opacity-60"></div>
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-20 relative">
+    <div class="text-center max-w-xl mx-auto mb-14">
+      <p class="text-copper mono text-[13px] font-semibold tracking-widest mb-3">HOW IT WORKS</p>
+      <h2 class="text-3xl sm:text-4xl font-semibold display tracking-tight text-white">Free Inspection to Finished Roof</h2>
+    </div>
+    <div class="grid sm:grid-cols-3 gap-6">
+      <div class="bg-navy2 border border-line rounded-xl p-7">
+        <p class="mono text-copper text-[13px] font-semibold mb-3">STEP 1</p>
+        <h3 class="text-white font-semibold text-[17px] mb-2">Free Inspection</h3>
+        <p class="text-white/55 text-[13.5px] leading-relaxed">A project manager inspects your roof and documents any damage — no cost, no obligation.</p>
+      </div>
+      <div class="bg-navy2 border border-line rounded-xl p-7">
+        <p class="mono text-copper text-[13px] font-semibold mb-3">STEP 2</p>
+        <h3 class="text-white font-semibold text-[17px] mb-2">Straightforward Quote</h3>
+        <p class="text-white/55 text-[13.5px] leading-relaxed">You get a clear, itemized quote the same day — plus help with insurance claims if applicable.</p>
+      </div>
+      <div class="bg-navy2 border border-line rounded-xl p-7">
+        <p class="mono text-copper text-[13px] font-semibold mb-3">STEP 3</p>
+        <h3 class="text-white font-semibold text-[17px] mb-2">Work, Done Right</h3>
+        <p class="text-white/55 text-[13.5px] leading-relaxed">Our crew completes the job, cleans up fully, and backs it with a written workmanship warranty.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="bg-cloud py-20 sm:py-24">
+  <div class="max-w-4xl mx-auto px-5 sm:px-8 text-center">
+    <h2 class="text-3xl sm:text-4xl font-semibold display tracking-tight mb-4">Not Sure Which Service You Need?</h2>
+    <p class="text-navy/60 text-lg mb-8 max-w-xl mx-auto">Start with a free inspection — we'll tell you exactly what's going on and what it'll take to fix it.</p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="index.html#quote" class="btn-copper text-ink font-semibold text-[15.5px] px-7 py-4 rounded-lg">Get a Free Quote</a>
+      <a href="tel:4692901620" class="flex items-center gap-3 border border-navy/15 hover:border-navy/35 transition-colors px-6 py-4 rounded-lg">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="mono font-semibold text-[16px]">(469) 290-1620</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink border-t border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <div class="flex items-center gap-2.5 mb-4">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><path d="M16 4L29 15H23V27H9V15H3L16 4Z" fill="#C77B3D"/><rect x="13" y="19" width="6" height="8" fill="#0A1220"/></svg>
+        <span class="text-white font-semibold display">Clark Brothers</span>
+      </div>
+      <p class="text-white/45 text-[13.5px] leading-relaxed max-w-xs">Family-owned roofing and construction serving Plano and the greater DFW metro since 2011.</p>
+    </div>
+    <div>
+      <p class="text-white text-[13px] font-semibold mono tracking-wide mb-4">NAVIGATE</p>
+      <ul class="space-y-2.5 text-[13.5px] text-white/50">
+        <li><a href="index.html#why" class="hover:text-copper transition-colors">Why Us</a></li>
+        <li><a href="services.html" class="hover:text-copper transition-colors">Services</a></li>
+        <li><a href="index.html#quote" class="hover:text-copper transition-colors">Get a Quote</a></li>
+        <li><a href="contact.html" class="hover:text-copper transition-colors">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-white text-[13px] font-semibold mono tracking-wide mb-4">CONTACT</p>
+      <ul class="space-y-2.5 text-[13.5px] text-white/50">
+        <li><a href="tel:4692901620" class="hover:text-copper transition-colors mono">(469) 290-1620</a></li>
+        <li>Plano, Texas</li>
+        <li>Mon–Sun, 24/7 Emergency</li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-white text-[13px] font-semibold mono tracking-wide mb-4">LEGAL</p>
+      <ul class="space-y-2.5 text-[13.5px] text-white/50">
+        <li><a href="#" class="hover:text-copper transition-colors">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-copper transition-colors">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-line py-6 px-5 sm:px-8 text-center text-white/35 text-[12.5px]">
+    © 2026 Clark Brothers Roofing & Construction. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+  // Roof-type accordion
+  document.querySelectorAll('#roofAccordion .acc-trigger').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.acc-item');
+      const panel = item.querySelector('.acc-panel');
+      const chevron = btn.querySelector('.acc-chevron');
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      document.querySelectorAll('#roofAccordion .acc-trigger').forEach(other => {
+        if (other !== btn) {
+          other.setAttribute('aria-expanded', 'false');
+          other.closest('.acc-item').querySelector('.acc-panel').classList.add('hidden');
+          other.querySelector('.acc-chevron').style.transform = 'rotate(0deg)';
+        }
+      });
+
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      panel.classList.toggle('hidden', isOpen);
+      chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clark Brothers Roofing & Construction | #1 Rated Plano Roofers</title>
+<meta name="description" content="Clark Brothers Roofing & Construction — Plano, Texas's top-rated roofing contractor. 4.9 stars on Google. Emergency roof repair day or night. Call (469) 290-1620.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root{
+    --ink:#0A1220;
+    --navy:#101B2E;
+    --navy2:#16243B;
+    --steel:#2C4460;
+    --cloud:#F5F7FA;
+    --paper:#ECEEF2;
+    --copper:#C77B3D;
+    --copper-light:#E2A365;
+    --line: rgba(255,255,255,0.09);
+  }
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',sans-serif; background:var(--cloud); color:var(--navy);}
+  h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  .bg-ink{background:var(--ink);}
+  .bg-navy{background:var(--navy);}
+  .bg-navy2{background:var(--navy2);}
+  .text-copper{color:var(--copper);}
+  .bg-copper{background:var(--copper);}
+  .border-line{border-color:var(--line);}
+  .btn-copper{
+    background:linear-gradient(180deg,var(--copper-light),var(--copper));
+    box-shadow:0 8px 24px -8px rgba(199,123,61,.55);
+  }
+  .btn-copper:hover{filter:brightness(1.07);}
+  .card{
+    background:#fff;
+    border:1px solid #E4E7EC;
+    box-shadow:0 1px 2px rgba(16,27,46,.04);
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .card:hover{transform:translateY(-4px); box-shadow:0 20px 40px -16px rgba(16,27,46,.18); border-color:#D8DEE7;}
+  .roofline{display:block; width:100%; line-height:0;}
+  .grain{
+    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,.06) 1px, transparent 0);
+    background-size: 22px 22px;
+  }
+  .blueprint{
+    background-image:
+      linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .mobile-menu{transform:translateY(-12px); opacity:0; pointer-events:none; transition:all .22s ease;}
+  .mobile-menu.open{transform:translateY(0); opacity:1; pointer-events:auto;}
+  ::selection{background:var(--copper); color:#fff;}
+  .focus-ring:focus{outline:2px solid var(--copper); outline-offset:2px;}
+  @media (prefers-reduced-motion: reduce){ .card{transition:none;} }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ============ NAV ============ -->
+<header class="fixed top-0 inset-x-0 z-50 bg-ink/95 backdrop-blur border-b border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 h-18 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2.5">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 4L29 15H23V27H9V15H3L16 4Z" fill="#C77B3D"/>
+        <rect x="13" y="19" width="6" height="8" fill="#0A1220"/>
+      </svg>
+      <span class="text-white display font-semibold text-[17px] leading-tight tracking-tight">Clark Brothers<br><span class="text-[11px] font-normal text-white/50 tracking-widest mono">ROOFING &amp; CONSTRUCTION</span></span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-9 text-[14.5px] font-medium text-white/75">
+      <a href="index.html#why" class="hover:text-white transition-colors">Why Us</a>
+      <a href="services.html" class="hover:text-white transition-colors">Services</a>
+      <a href="index.html#quote" class="hover:text-white transition-colors">Get a Quote</a>
+      <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="tel:4692901620" class="hidden sm:flex items-center gap-2 text-white mono text-[15px] font-semibold hover:text-copper transition-colors">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (469) 290-1620
+      </a>
+      <a href="index.html#quote" class="btn-copper text-ink font-semibold text-[13.5px] px-4 py-2.5 rounded-md">Free Quote</a>
+      <button id="menuBtn" class="md:hidden text-white p-1.5" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobileMenu" class="mobile-menu md:hidden bg-ink border-t border-line px-5 py-4 flex flex-col gap-4 text-white/85 text-[15px] font-medium">
+    <a href="index.html#why">Why Us</a>
+    <a href="services.html">Services</a>
+    <a href="index.html#quote">Get a Quote</a>
+    <a href="contact.html">Contact</a>
+    <a href="tel:4692901620" class="text-copper mono font-semibold">(469) 290-1620</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="relative bg-ink blueprint pt-32 pb-0 overflow-hidden">
+  <div class="absolute -right-24 top-24 w-[520px] h-[520px] rounded-full bg-copper/10 blur-3xl"></div>
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 relative grid lg:grid-cols-[1.15fr_.85fr] gap-14 items-center pb-24">
+    <div>
+      <div class="inline-flex items-center gap-2 bg-white/5 border border-line rounded-full px-4 py-1.5 mb-7">
+        <span class="w-1.5 h-1.5 rounded-full bg-copper"></span>
+        <span class="text-white/70 text-[12.5px] mono tracking-wide">PLANO, TX &amp; SURROUNDING DFW</span>
+      </div>
+      <h1 class="text-white text-[42px] sm:text-[58px] leading-[1.04] font-semibold tracking-tight display">
+        #1 Rated<br><span class="text-copper">Plano Roofers</span>
+      </h1>
+      <p class="text-white/70 text-lg sm:text-xl mt-6 max-w-lg leading-relaxed">
+        Emergency roof repair, <span class="text-white font-medium">day or night.</span> Storm damage, leaks, and full replacements — handled by a crew Plano homeowners actually trust.
+      </p>
+      <div class="flex flex-wrap items-center gap-4 mt-9">
+        <a href="#quote" class="btn-copper text-ink font-semibold text-[15.5px] px-7 py-4 rounded-lg">Get a Free Quote</a>
+        <a href="tel:4692901620" class="flex items-center gap-3 border border-white/15 hover:border-white/35 transition-colors text-white px-6 py-4 rounded-lg">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="mono font-semibold text-[16px]">(469) 290-1620</span>
+        </a>
+      </div>
+      <p class="text-white/40 text-[13px] mt-5 mono">24/7 EMERGENCY LINE · FREE INSPECTIONS · LICENSED &amp; INSURED</p>
+    </div>
+
+    <div class="relative">
+      <div class="bg-navy2 border border-line rounded-2xl p-7 sm:p-9 shadow-2xl relative">
+        <div class="flex items-center gap-1 mb-3">
+          <svg *ngFor width="0" height="0"></svg>
+          <div class="flex gap-1">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#E2A365"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#E2A365"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#E2A365"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#E2A365"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#E2A365"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          </div>
+          <span class="text-white mono font-semibold ml-1">4.9</span>
+        </div>
+        <p class="text-white text-sm leading-relaxed mb-5">"Clark Brothers had a tarp on our roof within two hours of the hailstorm. Full replacement was done in a day and a half — spotless cleanup."</p>
+        <div class="flex items-center justify-between border-t border-line pt-4">
+          <div>
+            <p class="text-white/90 text-[13.5px] font-medium">Google Verified Review</p>
+            <p class="text-white/40 text-[12px] mono">100+ Reviews</p>
+          </div>
+          <svg width="26" height="26" viewBox="0 0 24 24"><path fill="#fff" opacity=".9" d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81z"/></svg>
+        </div>
+      </div>
+      <div class="absolute -bottom-6 -left-6 bg-copper text-ink rounded-xl px-5 py-3.5 shadow-xl hidden sm:block">
+        <p class="mono text-2xl font-semibold leading-none">15+</p>
+        <p class="text-[11px] font-medium mt-1 tracking-wide">YEARS IN PLANO</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- roofline divider: ink -> cloud -->
+  <svg class="roofline" viewBox="0 0 1200 46" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <polygon points="0,46 0,26 50,6 100,26 150,6 200,26 250,6 300,26 350,6 400,26 450,6 500,26 550,6 600,26 650,6 700,26 750,6 800,26 850,6 900,26 950,6 1000,26 1050,6 1100,26 1150,6 1200,26 1200,46" fill="#F5F7FA"/>
+  </svg>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section id="why" class="bg-cloud pt-4 pb-20 sm:pb-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <p class="text-copper mono text-[13px] font-semibold tracking-widest mb-3">WHY PLANO TRUSTS US</p>
+      <h2 class="text-3xl sm:text-4xl font-semibold display tracking-tight">4.9 Stars on Google Maps<br class="hidden sm:block"> with 100+ Verified Reviews</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
+      <div class="card rounded-xl p-6">
+        <p class="mono text-4xl font-semibold text-copper">4.9<span class="text-lg">★</span></p>
+        <p class="text-sm text-navy/60 mt-2 font-medium">Google Rating</p>
+      </div>
+      <div class="card rounded-xl p-6">
+        <p class="mono text-4xl font-semibold text-copper">100+</p>
+        <p class="text-sm text-navy/60 mt-2 font-medium">Verified Reviews</p>
+      </div>
+      <div class="card rounded-xl p-6">
+        <p class="mono text-4xl font-semibold text-copper">15+</p>
+        <p class="text-sm text-navy/60 mt-2 font-medium">Years Serving DFW</p>
+      </div>
+      <div class="card rounded-xl p-6">
+        <p class="mono text-4xl font-semibold text-copper">24/7</p>
+        <p class="text-sm text-navy/60 mt-2 font-medium">Emergency Response</p>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="flex items-start gap-3.5 bg-white border border-[#E4E7EC] rounded-xl p-5">
+        <div class="shrink-0 w-10 h-10 rounded-lg bg-navy flex items-center justify-center">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#E2A365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        </div>
+        <div>
+          <p class="font-semibold text-[15px]">Licensed &amp; Insured</p>
+          <p class="text-[13px] text-navy/55 mt-1 leading-relaxed">Fully licensed, bonded, and insured across Texas.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3.5 bg-white border border-[#E4E7EC] rounded-xl p-5">
+        <div class="shrink-0 w-10 h-10 rounded-lg bg-navy flex items-center justify-center">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#E2A365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        </div>
+        <div>
+          <p class="font-semibold text-[15px]">Same-Day Emergency Service</p>
+          <p class="text-[13px] text-navy/55 mt-1 leading-relaxed">Tarping and repairs, day or night, storm or shine.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3.5 bg-white border border-[#E4E7EC] rounded-xl p-5">
+        <div class="shrink-0 w-10 h-10 rounded-lg bg-navy flex items-center justify-center">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#E2A365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4.5 8-11.8V5l-8-3-8 3v5.2C4 17.5 12 22 12 22z"/></svg>
+        </div>
+        <div>
+          <p class="font-semibold text-[15px]">Workmanship Warranty</p>
+          <p class="text-[13px] text-navy/55 mt-1 leading-relaxed">Every install backed by a written labor guarantee.</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-3.5 bg-white border border-[#E4E7EC] rounded-xl p-5">
+        <div class="shrink-0 w-10 h-10 rounded-lg bg-navy flex items-center justify-center">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#E2A365" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+        </div>
+        <div>
+          <p class="font-semibold text-[15px]">Locally Owned in Plano</p>
+          <p class="text-[13px] text-navy/55 mt-1 leading-relaxed">Family-run, serving Plano &amp; the DFW metro.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES PREVIEW ============ -->
+<section class="bg-navy relative overflow-hidden">
+  <div class="absolute inset-0 blueprint opacity-60"></div>
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-20 sm:py-28 relative">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14">
+      <div class="max-w-xl">
+        <p class="text-copper mono text-[13px] font-semibold tracking-widest mb-3">WHAT WE DO</p>
+        <h2 class="text-3xl sm:text-4xl font-semibold display tracking-tight text-white">Roofing Services Built<br>for Texas Weather</h2>
+      </div>
+      <a href="services.html" class="inline-flex items-center gap-2 text-copper font-semibold text-[15px] hover:gap-3 transition-all">
+        View all services
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Card 1 -->
+      <div class="card rounded-xl p-7">
+        <div class="w-11 h-11 rounded-lg bg-ink flex items-center justify-center mb-5">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2s6 6.5 6 11.5A6 6 0 016 13.5C6 8.5 12 2 12 2z"/></svg>
+        </div>
+        <h3 class="font-semibold text-[17px] mb-2">Leak Detection &amp; Repair</h3>
+        <p class="text-[13.5px] text-navy/55 leading-relaxed">Pinpoint diagnostics that stop hidden leaks before they become structural damage.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="card rounded-xl p-7">
+        <div class="w-11 h-11 rounded-lg bg-ink flex items-center justify-center mb-5">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 000-9 6 6 0 00-11.5-1.5A4.5 4.5 0 006 17"/><path d="M11 20l1.5-3M15 20l1.5-3M8 20l1.5-3"/></svg>
+        </div>
+        <h3 class="font-semibold text-[17px] mb-2">Emergency Hail &amp; Storm Damage</h3>
+        <p class="text-[13.5px] text-navy/55 leading-relaxed">Rapid tarping and repair after severe DFW storms — day or night, 24/7.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="card rounded-xl p-7">
+        <div class="w-11 h-11 rounded-lg bg-ink flex items-center justify-center mb-5">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        </div>
+        <h3 class="font-semibold text-[17px] mb-2">Shingle &amp; Tile Replacement</h3>
+        <p class="text-[13.5px] text-navy/55 leading-relaxed">Precision matching and replacement for asphalt, tile, and composite roofing.</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="card rounded-xl p-7">
+        <div class="w-11 h-11 rounded-lg bg-ink flex items-center justify-center mb-5">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg>
+        </div>
+        <h3 class="font-semibold text-[17px] mb-2">Full Roof Replacement</h3>
+        <p class="text-[13.5px] text-navy/55 leading-relaxed">Complete tear-off and re-roof with premium materials and a written warranty.</p>
+      </div>
+      <!-- Card 5 -->
+      <div class="card rounded-xl p-7">
+        <div class="w-11 h-11 rounded-lg bg-ink flex items-center justify-center mb-5">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+        </div>
+        <h3 class="font-semibold text-[17px] mb-2">Commercial &amp; Residential</h3>
+        <p class="text-[13.5px] text-navy/55 leading-relaxed">From single-family homes to multi-unit and commercial low-slope roofs.</p>
+      </div>
+      <!-- Card 6 -->
+      <div class="card rounded-xl p-7">
+        <div class="w-11 h-11 rounded-lg bg-ink flex items-center justify-center mb-5">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#C77B3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="4" height="8"/><path d="M5 22V13a7 7 0 0114 0v9"/></svg>
+        </div>
+        <h3 class="font-semibold text-[17px] mb-2">Gutter, Chimney &amp; Fascia</h3>
+        <p class="text-[13.5px] text-navy/55 leading-relaxed">Full exterior protection — gutters, chimney flashing, and fascia repair.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUOTE FORM ============ -->
+<section id="quote" class="bg-cloud py-20 sm:py-28">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-[1fr_1.15fr] gap-12 items-start">
+    <div class="lg:sticky lg:top-28">
+      <p class="text-copper mono text-[13px] font-semibold tracking-widest mb-3">GET A FREE QUOTE</p>
+      <h2 class="text-3xl sm:text-4xl font-semibold display tracking-tight mb-5">Tell Us What's Going On<br>With Your Roof</h2>
+      <p class="text-navy/60 leading-relaxed mb-8 max-w-md">Fill out the form and a Clark Brothers project manager will follow up same-day with a free, no-pressure inspection and quote.</p>
+      <div class="flex items-center gap-4 bg-navy rounded-xl p-5 max-w-md">
+        <div class="w-11 h-11 shrink-0 rounded-lg bg-copper flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0A1220" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div>
+          <p class="text-white/50 text-[12px] mono">PREFER TO CALL?</p>
+          <a href="tel:4692901620" class="text-white font-semibold text-lg mono">(469) 290-1620</a>
+        </div>
+      </div>
+    </div>
+
+    <form id="quoteForm" class="bg-white border border-[#E4E7EC] rounded-2xl shadow-xl p-7 sm:p-9">
+      <div id="formSuccess" class="hidden mb-6 bg-green-50 border border-green-200 text-green-800 text-sm rounded-lg p-4">
+        Thanks — your request has been received. A Clark Brothers project manager will call you shortly.
+      </div>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div class="sm:col-span-1">
+          <label for="name" class="block text-[13px] font-semibold text-navy/70 mb-1.5">Full Name</label>
+          <input required id="name" name="name" type="text" placeholder="Jane Smith" class="focus-ring w-full rounded-lg border border-[#D8DEE7] px-4 py-3 text-[15px] outline-none focus:border-copper transition-colors">
+        </div>
+        <div class="sm:col-span-1">
+          <label for="phone" class="block text-[13px] font-semibold text-navy/70 mb-1.5">Phone Number</label>
+          <input required id="phone" name="phone" type="tel" placeholder="(469) 555-0142" class="focus-ring w-full rounded-lg border border-[#D8DEE7] px-4 py-3 text-[15px] outline-none focus:border-copper transition-colors">
+        </div>
+        <div class="sm:col-span-2">
+          <label for="email" class="block text-[13px] font-semibold text-navy/70 mb-1.5">Email Address</label>
+          <input required id="email" name="email" type="email" placeholder="jane@email.com" class="focus-ring w-full rounded-lg border border-[#D8DEE7] px-4 py-3 text-[15px] outline-none focus:border-copper transition-colors">
+        </div>
+        <div class="sm:col-span-2">
+          <label for="service" class="block text-[13px] font-semibold text-navy/70 mb-1.5">Service Needed</label>
+          <select required id="service" name="service" class="focus-ring w-full rounded-lg border border-[#D8DEE7] px-4 py-3 text-[15px] outline-none focus:border-copper transition-colors bg-white">
+            <option value="" disabled selected>Select a service</option>
+            <option>Leak Detection and Repair</option>
+            <option>Emergency Hail & Storm Damage Repair</option>
+            <option>Shingle & Tile Replacement</option>
+            <option>Full Roof Replacement</option>
+            <option>Commercial & Residential Roofing</option>
+            <option>Gutter, Chimney, & Fascia Repair</option>
+            <option>Not Sure / Free Inspection</option>
+          </select>
+        </div>
+        <div class="sm:col-span-2">
+          <label for="message" class="block text-[13px] font-semibold text-navy/70 mb-1.5">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about the issue, your address, and the best time to reach you." class="focus-ring w-full rounded-lg border border-[#D8DEE7] px-4 py-3 text-[15px] outline-none focus:border-copper transition-colors resize-none"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn-copper w-full mt-7 text-ink font-semibold text-[15.5px] py-4 rounded-lg">Submit Quote Request</button>
+      <p class="text-center text-[12px] text-navy/40 mt-4">No spam, ever. We respond to every request within one business day.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink border-t border-line">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <div class="flex items-center gap-2.5 mb-4">
+        <svg width="26" height="26" viewBox="0 0 32 32" fill="none"><path d="M16 4L29 15H23V27H9V15H3L16 4Z" fill="#C77B3D"/><rect x="13" y="19" width="6" height="8" fill="#0A1220"/></svg>
+        <span class="text-white font-semibold display">Clark Brothers</span>
+      </div>
+      <p class="text-white/45 text-[13.5px] leading-relaxed max-w-xs">Family-owned roofing and construction serving Plano and the greater DFW metro since 2011.</p>
+    </div>
+    <div>
+      <p class="text-white text-[13px] font-semibold mono tracking-wide mb-4">NAVIGATE</p>
+      <ul class="space-y-2.5 text-[13.5px] text-white/50">
+        <li><a href="index.html#why" class="hover:text-copper transition-colors">Why Us</a></li>
+        <li><a href="services.html" class="hover:text-copper transition-colors">Services</a></li>
+        <li><a href="index.html#quote" class="hover:text-copper transition-colors">Get a Quote</a></li>
+        <li><a href="contact.html" class="hover:text-copper transition-colors">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-white text-[13px] font-semibold mono tracking-wide mb-4">CONTACT</p>
+      <ul class="space-y-2.5 text-[13.5px] text-white/50">
+        <li><a href="tel:4692901620" class="hover:text-copper transition-colors mono">(469) 290-1620</a></li>
+        <li>Plano, Texas</li>
+        <li>Mon–Sun, 24/7 Emergency</li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-white text-[13px] font-semibold mono tracking-wide mb-4">LEGAL</p>
+      <ul class="space-y-2.5 text-[13.5px] text-white/50">
+        <li><a href="#" class="hover:text-copper transition-colors">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-copper transition-colors">Terms of Service</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-line py-6 px-5 sm:px-8 text-center text-white/35 text-[12.5px]">
+    © 2026 Clark Brothers Roofing & Construction. All Rights Reserved.
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+  mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+  const form = document.getElementById('quoteForm');
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    document.getElementById('formSuccess').classList.remove('hidden');
+    form.reset();
+    document.getElementById('formSuccess').scrollIntoView({behavior:'smooth', block:'center'});
+  });
+</script>
+</body>
+</html>
